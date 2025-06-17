@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: finance-records-api-service
+spec:
+  selector:
+    app: finance-records-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: ClusterIP
